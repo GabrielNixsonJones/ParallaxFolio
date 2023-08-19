@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.button-63 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #A782EC, #5D27C3 50%, #E7B5FE);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.crystal {
+  filter: drop-shadow(0px 0px 2rem rgba(0, 152, 247, 10));
+}
+
+.GlowCrystal {
+  filter: drop-shadow(0px 0px 3rem #00FDFF);
+}
+
+@keyframes glowcry {
+  0% {
+    filter: drop-shadow(0px 0px 1rem #00FDFF);
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 3rem #00FDFF);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 1rem #00FDFF);
+  }
+}
+
+.Glow {
+  filter: drop-shadow(0px 0px 3rem #FFFF00);
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0px 0px 1rem #FFFF00);
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 3rem #FFFF00);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 1rem #FFFF00);
+  }
+}
+
+.planetGlow2 {
+  filter: drop-shadow(0px 0px 3rem #A830B8);
+}
+
+@keyframes glow2 {
+  0% {
+    filter: drop-shadow(0px 0px 1rem #A830B8);
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 3rem #A830B8);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 1rem #A830B8);
+  }
+}
+
+.landGlow {
+  filter: drop-shadow(0px 0px 1rem rgba(0, 152, 247, 10));
+}
+
+.control-arrow {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+input.inputText::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+textarea.inputText::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+/* .thumbs-wrapper {
+  display: none;
+} */
