@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+import emailjs from '@emailjs/browser';
 
 import { Link } from 'react-scroll';
 
@@ -10,6 +12,42 @@ import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { BiLogoGmail } from 'react-icons/bi';
 
 export const Page10 = () => {
+
+    // useEffect(() => {
+    //     let api_key =
+    //         "3C79D494C344554C61649064E973B3C39B6284295F03E214419C000144DA15999438D15911F1EDB1A6A4560CB149DEC4";
+
+    //     var client = elasticemail.createClient({
+    //         apiKey: api_key,
+    //     });
+
+    //     var msg = {
+    //         from: "jgabigabi2001@gmail.com",
+    //         to: "jgabigabi2001@gmail.com",
+    //         subject: "warm grettings",
+    //         body_text: "welcome my todomachi",
+    //     };
+
+    //     client.mailer.send(msg, function (err, result) {
+    //         if (err) {
+    //             return console.error(err);
+    //         }
+
+    //         console.log(result);
+    //     })
+    // })
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_jrto52s', 'template_5o23e7d', form.current, 'fLtp9pirLhYgt4ITW')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'clip', zIndex: '1' }} id='page10'>
@@ -116,57 +154,24 @@ export const Page10 = () => {
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}>
-                    <div style={{ width: '100%', margin: '0.2vw' }}>
-                        <input className='inputText' placeholder='Enter Your Name' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white' }} />
-                    </div>
 
-                    <div style={{ width: '100%', margin: '0.2vw' }}>
-                        <input className='inputText' placeholder='Enter Your Email' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white' }} />
-                    </div>
+                    <form ref={form} onSubmit={sendEmail} style={{ width: '100%' }}>
 
-                    <div style={{ width: '100%', margin: '0.2vw' }}>
-                        <input className='inputText' placeholder='Enter Your Subject' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white' }} />
-                    </div>
+                        <input className='inputText' type="text" name="user_name" placeholder='Enter Your Name' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white', margin: '0.2vw' }} />
 
-                    <div style={{ width: '100%', margin: '1vw' }}>
-                        <textarea className='inputText' placeholder='Enter Your Message' style={{ width: '100%', height: '6vw', fontSize: '1vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white' }} name="Text1" rows="5"></textarea>
-                    </div>
+                        <input className='inputText' type="email" name="user_email" placeholder='Enter Your Email' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white', margin: '0.2vw' }} />
 
-                    <motion.div style={{ width: '100%', marginTop: '2vh', marginLeft: '0.5vw', marginRight: '0.5vw' }} whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.9 }} >
+                        <input className='inputText' type="text" name="user_subject" placeholder='Enter Your Subject' style={{ width: '100%', height: '2.2vw', fontSize: '0.9vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white', margin: '0.2vw' }} />
 
-                        <button className='button-63' style={{ width: '100%' }}>Submit</button>
+                        <textarea name="message" className='inputText' placeholder='Enter Your Message' style={{ width: '100%', height: '6vw', fontSize: '1vw', outline: 'none', textIndent: '0.7vw', borderRadius: '0.5rem', backgroundColor: 'rgba(255, 255, 255, 0.2)', color: 'white', margin: '0.2vw', marginTop: '1vw' }} rows="5"></textarea>
 
-                    </motion.div>
+                        <motion.input value="Send" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }} type='submit' className='button-63' style={{ width: '100%', margin: '0.2vw', marginLeft: '0.5vw' }}></motion.input>
+
+                    </form>
 
                 </motion.div>
 
             </div>
-            {/* <AnimatePresence>
-                <motion.div style={{ position: 'absolute', width: '20%', height: '20%', top: '3%', left: '3%', zIndex: '2' }}
-                    //animate
-                    whileInView={{
-                        y: [50, 150, 50],
-
-                    }}
-                    transition={{ ease: "easeInOut", duration: 15, repeat: Infinity }}>
-                    <img className='crystal' style={{ width: '100%', height: '100%', objectFit: 'contain' }} src='/page4wp/l1.webp' alt='' />
-
-                </motion.div>
-            </AnimatePresence>
-
-            <AnimatePresence>
-                <motion.div style={{ position: 'absolute', width: '20%', height: '20%', top: '20%', left: '30%', backgroundSize: 'cover', zIndex: '1' }}
-                    //animate
-                    whileInView={{
-                        y: [50, 150, 50],
-
-                    }}
-                    transition={{ ease: "easeInOut", duration: 12, repeat: Infinity }}>
-                    <img className='crystal' style={{ width: '100%', height: '100%', objectFit: 'contain' }} src='/page4wp/l3.webp' alt='' />
-
-                </motion.div>
-            </AnimatePresence> */}
-
 
             <AnimatePresence>
                 <motion.div style={{ position: 'absolute', color: 'white', zIndex: 4, fontSize: '4vw', bottom: '4.3%', cursor: 'pointer' }}

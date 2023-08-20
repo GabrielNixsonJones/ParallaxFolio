@@ -142,3 +142,21 @@ textarea.inputText::placeholder {
 /* .thumbs-wrapper {
   display: none;
 } */
+
+.mobileContainer {
+  display: none;
+}
+
+.actualContainer {
+  display: contents;
+}
+
+@media (max-width: 1000px) {
+  .mobileContainer {
+    display: contents;
+  }
+
+  .actualContainer {
+    display: none;
+  }
+}

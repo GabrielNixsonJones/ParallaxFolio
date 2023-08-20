@@ -82,8 +82,8 @@ export const Page4 = () => {
                                     Hey there! I'm Gabriel, a passionate and motivated Full Stack Web Developer with a strong knowledge towards the MERN stack.
                                     As a fresher in the web development world, I'm excited to create immersive web experiences that engage users and solve real-world problems.
                                     My journey into the world of web development started with a curious mind and a desire to bring my creative ideas to life.
-                                    I immersed myself in learning front-end technologies like HTML, CSS, and JavaScript, relishing the art of crafting visually appealing and interactive user interfaces.
-                                    As I delved deeper, I realized that the true magic happens when the front-end and back-end seamlessly collaborate. This discovery led me to explore the MERN stack MongoDB, Express, React, and Node.js
+                                    I immersed myself in learning front-end technologies like HTML, CSS, and JavaScript, manifest the art of crafting visually appealing and interactive user interfaces.
+                                    As I develop deeper, I realized that the true magic happens when the front-end and back-end seamlessly collaborate. This discovery led me to explore the MERN stack MongoDB, Express, React, and Node.js
 
                                     <p style={{ fontSize: '1.1vw', fontWeight: '500', textIndent: '1.8vw' }}>
                                         I approach every project with curiosity and a commitment to continuous learning. I believe that the best solutions come from collaboration and a deep understanding of user needs.
