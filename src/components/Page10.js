@@ -44,9 +44,18 @@ export const Page10 = () => {
         emailjs.sendForm('service_jrto52s', 'template_5o23e7d', form.current, 'fLtp9pirLhYgt4ITW')
             .then((result) => {
                 console.log(result.text);
+                console.log(result);
+                if (result.text === 'OK') {
+                    alert('message sent succesfully');
+                    form.current.reset()
+                }
+                else {
+                    alert('message failed try again')
+                }
             }, (error) => {
                 console.log(error.text);
             });
+
     };
 
     return (

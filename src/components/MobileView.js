@@ -79,7 +79,7 @@ export const MobileView = React.memo(() => {
                 <img className='planetGlow2' style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page11wp/star.webp' alt='' />
             </motion.div>
 
-            <div style={{ width: '90%', position: 'absolute', zIndex: '1', color: '#ffffff', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textShadow: '0 0 0.5rem black' }}>
+            <div style={{ width: '90%', position: 'absolute', zIndex: '1', color: '#ffffff', top: '35%', left: '50%', transform: 'translate(-50%, -50%)', textShadow: '0 0 0.5rem black' }}>
                 <motion.div
                     whileInView={{
                         y: [10, 40, 10],
