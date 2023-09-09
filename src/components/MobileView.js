@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRef } from 'react';
 
 import { Page1 } from './SmPage/Page1';
 import { Page2 } from './SmPage/Page2';
@@ -13,11 +12,7 @@ import { Page9 } from './SmPage/Page9';
 import { Page10 } from './SmPage/Page10';
 import { FinalPage } from './SmPage/FinalPage';
 
-import { motion } from 'framer-motion';
-
 export const MobileView = React.memo(() => {
-
-    const ref2 = useRef(null);
 
     return (
         <div>
