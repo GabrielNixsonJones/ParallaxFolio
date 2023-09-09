@@ -160,3 +160,11 @@ textarea.inputText::placeholder {
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+
+  .button-63 {
+    font-size: 18px;
+  }
+
+}
