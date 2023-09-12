@@ -23,11 +23,12 @@ export const HomePage = () => {
 
 
             <motion.div className='intro'
-                initial={{ display: "flex" }}
+                initial={{ display: "flex", opacity: 1 }}
                 animate={{
-                    display: 'none'
+                    display: 'none',
+                    opacity: 0
                 }}
-                transition={{ delay: 4 }}>
+                transition={{ delay: 4, opacity: { delay: 2.3, duration: 1 } }}>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{
