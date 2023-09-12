@@ -19,7 +19,7 @@ export const Page6 = React.memo(() => {
 
             </div>
 
-            <motion.div style={{ position: 'absolute', width: '40%', height: '40%', zIndex: '-2' }}
+            <motion.div style={{ position: 'absolute', width: '40%', height: '40%', zIndex: '-1', top: '23%' }}
                 initial={{}}
                 //animate
                 whileInView={{
@@ -83,9 +83,9 @@ export const Page6 = React.memo(() => {
                 </p>
             </motion.div>
 
-            <div style={{ height: '100%', width: '90%', display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
+            <div style={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
 
-                <div style={{ width: '100%', height: '40%', justifyContent: 'center' }}>
+                <div style={{ width: '100%', height: '45%', justifyContent: 'center', backgroundColor: 'rgba(255, 255, 255, 0.2)', borderRadius: '1.5rem' }}>
 
                     <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                         <h1>Technical skills</h1>
@@ -152,45 +152,45 @@ export const Page6 = React.memo(() => {
 
                 </div>
 
-                <div style={{ width: '100%', height: '60%' }}>
+                <div style={{ width: '100%', height: '45%' }}>
 
-                    <div style={{ textAlign: 'center' }}>
-                        <h1>Professional skills</h1>
+                    <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', borderRadius: '1.5rem' }}>
+                        <div style={{ textAlign: 'center' }}>
+                            <h1>Professional skills</h1>
+                        </div>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(1rem, 5rem))', gridColumnGap: '5rem', justifyContent: 'center', fontWeight: 'bold', fontSize: '0.8rem' }}>
+
+                            <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                                <div style={{ aspectRatio: '1/1' }}>
+                                    <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/teamWork.webp' alt='' />
+                                </div>
+                                <p>Team Player</p>
+                            </div>
+
+                            <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                                <div style={{ aspectRatio: '1/1' }}>
+                                    <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/creativity.webp' alt='' />
+                                </div>
+                                <p>creative</p>
+                            </div>
+
+                            <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                                <div style={{ aspectRatio: '1/1' }}>
+                                    <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/problemSolving.webp' alt='' />
+                                </div>
+                                <p>Problem Solving</p>
+                            </div>
+
+                            <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                                <div style={{ aspectRatio: '1/1' }}>
+                                    <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/communication.webp' alt='' />
+                                </div>
+                                <p>communicative</p>
+                            </div>
+
+                        </div>
                     </div>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(1rem, 5rem))', gridColumnGap: '5rem', justifyContent: 'center', fontWeight: 'bold', fontSize: '0.8rem' }}>
-
-                        <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                            <div style={{ aspectRatio: '1/1' }}>
-                                <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/teamWork.webp' alt='' />
-                            </div>
-                            <p>Team Player</p>
-                        </div>
-
-                        <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                            <div style={{ aspectRatio: '1/1' }}>
-                                <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/creativity.webp' alt='' />
-                            </div>
-                            <p>creative</p>
-                        </div>
-
-                        <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                            <div style={{ aspectRatio: '1/1' }}>
-                                <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/problemSolving.webp' alt='' />
-                            </div>
-                            <p>Problem Solving</p>
-                        </div>
-
-                        <div style={{ aspectRatio: '1/1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                            <div style={{ aspectRatio: '1/1' }}>
-                                <img style={{ objectFit: 'contain', width: '100%', height: '100%' }} src='/page6wp/communication.webp' alt='' />
-                            </div>
-                            <p>communicative</p>
-                        </div>
-
-                    </div>
-
-
                 </div>
             </div>
 

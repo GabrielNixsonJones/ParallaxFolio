@@ -6,6 +6,7 @@ import './App.css';
 import { MobileView } from "./components/MobileView";
 
 function App() {
+
   return (
     <Router>
       <Routes>

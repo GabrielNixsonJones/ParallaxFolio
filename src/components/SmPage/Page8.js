@@ -30,8 +30,8 @@ export const Page8 = React.memo(() => {
 
             <div style={{ width: '90%', height: '90%', paddingBottom: '3%', borderRadius: '1rem', display: 'flex', color: 'white', flexDirection: 'row-reverse', position: 'relative', zIndex: '3', flexWrap: 'wrap' }}>
 
-                <div style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ width: '100%', height: '80%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
+                <div style={{ width: '100%', display: 'flex', flexDirection: 'column', height: '50%' }}>
+                    <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}>
 
 
                         <div>

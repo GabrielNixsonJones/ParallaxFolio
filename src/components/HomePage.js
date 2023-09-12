@@ -13,11 +13,39 @@ import { Page10 } from './Page10';
 import { FinalPage } from './FinalPage';
 import { MobileView } from './MobileView';
 
+import { motion } from 'framer-motion';
+
 
 export const HomePage = () => {
 
     return (
-        <div >
+        <div style={{ position: 'relative', overflowX: 'hidden', overflowY: 'hidden' }}>
+
+
+            <motion.div className='intro'
+                initial={{ display: "flex" }}
+                animate={{
+                    display: 'none'
+                }}
+                transition={{ delay: 4 }}>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{
+                        opacity: 1,
+                    }}
+                    transition={{ ease: "easeInOut", duration: 2 }}
+                >
+                    <motion.div
+                        initial={{ scale: 1 }}
+                        animate={{
+                            scale: 50,
+                        }}
+                        transition={{ ease: "easeInOut", duration: 2, delay: 2 }}>
+                        <h1>Hello!</h1>
+                    </motion.div>
+                </motion.div>
+            </motion.div>
+
 
             <div className='actualContainer'>
                 <div>
